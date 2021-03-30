@@ -13,6 +13,43 @@ background-attachment: fixed;
 background-size: 100% 100%;
 }
 </style>
+<style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover {
+      background-color: #111;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <ul>
+      <li><a class="active" href="#first">About Myself</a></li>
+      <li><a href="#second">My Timetable</a></li>
+      <li><a href="#contact">Age Calculator</a></li>
+      <li><a href="#about">Feedback</a></li>
+      <li><a href="#about">Contact Me</a></li>
+    </ul>
+    </body>
+</style>    
 <p id="name" style="font-size:180%;" align="center" ></p>
 <script>
 var personal=window.prompt("Enter Your Name");
@@ -32,17 +69,15 @@ document.getElementById("name").innerHTML = "Hello "+personal+"! Welcome to my h
     
     </audio>
 </p>
-<h1 align="center" style="color:blue;">ABOUT MYSELF</h1>
+<h1 align="center" style="color:blue;" id="first">ABOUT MYSELF</h1>
 <p><img src=".\rr.png" alt="Image of Raghav Rander" style="float:right;width:300px;height:350px;">
 <p style="font-size:160%;">Hello!! I am Raghav Rander, a fresher in Civil Engineering at IIT Bombay. Yes I know you might assume me to be a studious guy but on the contrary I am just an average person somehow barely surviving in the online mode.<br>
 <h4 style="font-size:140%;">HOBBIES:</h4>
-<ul style="list-style-type:circle;">
-<li style="font-size:130%;">Playing Badminton</li>
-<li style="font-size:130%;">Watching web series</li>
-<li style="font-size:130%;">Music</li>
-</ul>
+<p style="font-size:130%;" align="left">1. Playing Badminton</p>
+<p style="font-size:130%;" align="left">2. Watching web series</p>
+<p style="font-size:130%;" align="left">3. Music</p>
 <p style="font-size:160%;">This webpage is a part of my project for week 1 of SoC :2021. I have developed it after learning some concepts of HTML, CSS and JavaScript. So do check it out and I hope you like it!</p><br><br>
-<h1 align="center" style="color:red;">MY TIMETABLE</h1>
+<h1 align="center" style="color:red;" id="second">MY TIMETABLE</h1>
 <p style="font-size:160%;">Lets have a look what my daily schedule looks like here at IIT:</p><br>
 <table style="width:100%" border="1" align="center" bordercolor="red" height="400">
 <tr bgcolor="chocolate">
