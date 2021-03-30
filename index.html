@@ -44,7 +44,7 @@ background-size: 100% 100%;
     <ul>
       <li><a class="active" href="#first">About Myself</a></li>
       <li><a href="#second">My Timetable</a></li>
-      <li><a href="#contact">Age Calculator</a></li>
+      <li><a href="#third">Age Calculator</a></li>
       <li><a href="#about">Feedback</a></li>
       <li><a href="#about">Contact Me</a></li>
     </ul>
@@ -125,7 +125,41 @@ document.getElementById("name").innerHTML = "Hello "+personal+"! Welcome to my h
 <td colspan="2" align="center" style="color:brown" title="Biology">BB 101</td>
 </tr>
 </table><br><br>
-
-
+<h1 align="center" style="color:rgb(255, 251, 0);" id="third">AGE CALCULATOR</h1><br>
+<form align="center">
+<label for="dob" style="font-size:150%;">Date Of Birth:</label><br><br>
+<input type="date" id="dob" style="height: 40px; width:280px;">
+</form>
+<form align="center">
+<label for="newdate" style="font-size:150%;">Age To Be Calculated On:</label><br><br>
+<input type="date" id="newdate" style="height: 40px; width:280px;">
+</form>
+<script>
+function age_calc()
+{
+var d1=document.getElementById("dob").value;
+var d2=document.getElementById("newdate").value;
+var d3=new Date(d1);
+var d4=new Date(d2);
+if(d1==null || d2==null || d1=="" || d2=="" )
+{
+document.getElementById("error").innerHTML = "Warning: Invalid input! Choose a date!";
+return false;
+}
+else{
+diff=d4.getFullYear()-d3.getFullYear();
+if(d4.getMonth()<d3.getMonth() || d4.getMonth==d3.getMonth() && d4.getDate()<d3.getDate())
+{
+diff=diff-1;
+}
+return document.getElementById("age").innerHTML="Age is "+diff+" year(s). ";
+}
+}
+</script>
+<h3 align="center" style="color:rgb(104, 10, 10)" id="age"></h3>
+<center>
+<button type="submit" onclick="age_calc()">Calculate Your Age</button> 
+</center>
+<p id="error" align="center" style="color:rgb(60, 255, 0);font-size:180%;"></p>
 </body>
 </html>
