@@ -16,7 +16,14 @@ background-size: 100% 100%;
 <p id="name" style="font-size:180%;" align="center" ></p>
 <script>
 var personal=window.prompt("Enter Your Name");
-document.getElementById("name").innerHTML = "Hello "+personal+"! Welcome to my homepage!";
+if(personal==null)
+{
+document.getElementById("name").innerHTML = "Hello! Welcome to my homepage!";
+}
+else
+{
+document.getElementById("name").innerHTML = "Hello "+personal+"! Welcome to my homepage!";    
+}
 </script>
 <body>
 <p style="font-size: 250%;">Click on play to listen to some soothing music on loop
