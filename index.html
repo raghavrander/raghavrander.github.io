@@ -150,7 +150,7 @@ if(d1==null || d2==null || d1=="" || d2=="" )
 document.getElementById("error").innerHTML = "Warning: Invalid input! Choose a date!";
 return false;
 }
-else if(d4.getFullYear()-d3.getFullYear()<0)
+else if(d4.getFullYear()-d3.getFullYear()<0 || d4.getMonth()-d3.getMonth()<0 || d4.getDate()-d3.getDate()<0)
 {
   document.getElementById("error").innerHTML = "Please enter valid input!";
 }
