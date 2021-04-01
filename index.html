@@ -49,8 +49,8 @@ background-size: 100% 100%;
       <li><a class="active" href="#first">About Myself</a></li>
       <li><a href="#second">My Timetable</a></li>
       <li><a href="#third">Age Calculator</a></li>
-      <li><a href="#about">Feedback</a></li>
-      <li><a href="#about">Contact Me</a></li>
+      <li><a href="#fourth">Feedback</a></li>
+      <li><a href="#fifth">Contact Me</a></li>
     </ul>
     </body>
 </style>    
@@ -165,5 +165,30 @@ return document.getElementById("age").innerHTML="Age is "+diff+" year(s). ";
 <button type="submit" onclick="age_calc()">Calculate Your Age</button> 
 </center>
 <p id="error" align="center" style="color:rgb(60, 255, 0);font-size:180%;"></p>
+<h1 align="center" id="fourth" style="color:violet">FEEDBACK</h1>
+<form>
+  <label for="name" style="font-size:150%;">Name:</label><br>
+  <input type="text" id="name" style="width:600px;"><br><br>
+  <label for="comment" style="font-size:150%;">Comments:</label><br>
+  <input type="text" id="comment" style="height: 100px; width:1000px;" ><br>
+</form>
+<p id="click" style="font-size:130%;"></p>
+<button onclick="Message()">Submit</button>
+<script>
+function Message() {
+  document.getElementById("click").innerHTML = "Your feedback has been recorded. Thank You!";
+}
+</script>
+<h1 align="center" id="fifth" style="color:rgb(255, 115, 0)">CONTACT ME</h1>
+<a href="https://www.facebook.com/rander.raghav"> 
+  <p align="center">
+  <img src=".\fb.png" style="width:28px;text-align: center;" > </p>
+</a> 
+<a href="https://www.instagram.com/raghav_rander04/"> 
+  <p align="center">
+  <img src=".\insta.png" align="center" style="width:28px;text-align: center;"> </p>
+</a> 
+<p align="center" style="font-size: 140%;">E-mail: raghavr798@gmail.com</p>
+
 </body>
 </html>
