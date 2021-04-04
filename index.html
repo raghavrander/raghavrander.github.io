@@ -178,9 +178,17 @@ return document.getElementById("age").innerHTML="Age is "+diff+" year(s). ";
 </form>
 <p id="click" style="font-size:130%;"></p>
 <button onclick="Message()">Submit</button>
+<p id="err" align="center" style="color:rgb(60, 255, 0);font-size:180%;"></p>
 <script>
 function Message() {
+  if(name==null || name=="")
+  {
+    document.getElementById("err").innerHTML = "Please enter your name!"
+  }
+  else
+  {
   document.getElementById("click").innerHTML = "Your feedback has been recorded. Thank You!";
+  }
 }
 </script>
 <h1 align="center" id="fifth" style="color:rgb(255, 115, 0)">CONTACT ME</h1>
